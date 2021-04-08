@@ -9,7 +9,9 @@ polinom::polinom()
 
 polinom::polinom(number A,number B,number C)
 {
-
+    a=A;
+    b=B;
+    c=C;
 }
 
 void polinom::set(number A,number B,number C)
@@ -81,15 +83,15 @@ number polinom::value(number x)
     return polinom::a*x*x+polinom::b*x+polinom::c;
 }
 
-QString polinom::standart()
+std::string polinom::standart()
 {
     std::stringstream ss;
 
     ss << std::showpos << polinom::a << "*x^2" << polinom::b << "*x" << polinom::c << std::endl;
-    return QString::fromStdString(ss.str());
+    return ss.str();
 }
 
-QString polinom::canon()
+std::string polinom::canon()
 {
     std::stringstream ss;
     short flag;
@@ -117,5 +119,5 @@ QString polinom::canon()
         ss << "Неизвестная ошибка при вычислении корней";
         break;
     }
-    return QString::fromStdString(ss.str());
+    return ss.str();
 }

@@ -16,8 +16,8 @@ public:
     void set(number,number,number);
     void roots(short &, number &, number &);
     number value(number x);
-    QString standart();
-    QString canon();
+    std::string standart();
+    std::string canon();
 };
 
 #endif // POLINOM_H
