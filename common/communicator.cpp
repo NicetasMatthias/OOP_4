@@ -13,13 +13,7 @@ Communicator::Communicator(CommParams& p)
     else
     {
         qDebug()<<"not connected";
-
     }
-}
-
-bool Communicator::isReady()
-{
-    return ready;
 }
 
 void Communicator::send(QByteArray msg)

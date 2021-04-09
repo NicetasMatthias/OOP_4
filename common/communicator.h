@@ -20,7 +20,6 @@ class Communicator : public QUdpSocket
     CommParams params;
 public:
     Communicator(CommParams&);
-    bool isReady();
 
 signals:
     void recieved(QByteArray);
